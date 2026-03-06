@@ -1,0 +1,42 @@
+:root {
+  /* RADIUS */
+  --radius: 12px;
+
+  /* BASE COLORS */
+  --background: 222 47% 4%;
+  --foreground: 210 40% 98%;
+
+  --surface: 222 47% 8%;
+  --surface-foreground: 210 40% 98%;
+
+  --card: 222 47% 8%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 222 47% 8%;
+  --popover-foreground: 210 40% 98%;
+
+  /* PRIMARY */
+  --primary: 172 66% 50%;
+  --primary-foreground: 222 47% 4%;
+
+  /* SECONDARY */
+  --secondary: 215 28% 17%;
+  --secondary-foreground: 210 40% 98%;
+
+  /* MUTED */
+  --muted: 215 28% 17%;
+  --muted-foreground: 217 10% 65%;
+
+  /* ACCENT */
+  --accent: 172 66% 50%;
+  --accent-foreground: 222 47% 4%;
+
+  /* BORDER */
+  --border: 215 28% 17%;
+
+  /* INPUT */
+  --input: 215 28% 17%;
+
+  /* RING */
+  --ring: 172 66% 50%;
+}
