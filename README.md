@@ -1,73 +1,104 @@
-# React + TypeScript + Vite
+# 🌐 Carolina Valeriano - Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio profissional desenvolvido para apresentar meus projetos, experiência e habilidades como desenvolvedora frontend.
 
-Currently, two official plugins are available:
+O objetivo deste projeto é centralizar minhas experiências em desenvolvimento web e mobile, além de demonstrar boas práticas de arquitetura, consumo de APIs e design de interfaces modernas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 👩🏻‍💻 Sobre mim
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Sou desenvolvedora frontend com experiência em desenvolvimento de aplicações web e mobile utilizando tecnologias modernas do ecossistema JavaScript.
 
-## Expanding the ESLint configuration
+Atualmente trabalho com **React Native** no desenvolvimento de aplicações mobile e também possuo experiência com **React para web**.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Além do desenvolvimento frontend, tenho interesse em **análise de dados** e busco evoluir minhas habilidades nessa área.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+🎓 Estudante de **Engenharia de Computação no CEFET-MG**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+💻 Desenvolvedora Frontend
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+📊 Interessada em Dados e Produtos Digitais
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Tecnologias Utilizadas
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Este projeto foi desenvolvido utilizando tecnologias modernas do ecossistema frontend.
+
+### Frontend
+
+- React
+- TypeScript
+- JavaScript
+- HTML5
+- CSS3
+
+### Ferramentas
+
+- Git
+- GitHub
+- APIs REST
+- Figma
+
+---
+
+## ✨ Funcionalidades
+
+O portfólio possui diversas funcionalidades pensadas para demonstrar habilidades técnicas e oferecer uma boa experiência de navegação.
+
+- Apresentação profissional
+- Seção sobre mim
+- Exibição de tecnologias utilizadas
+- Listagem dinâmica de projetos
+- Integração com API do GitHub
+- Visualização de experiência profissional
+- Links para contato profissional
+- Interface responsiva
+- Suporte a modo **dark / light**
+
+---
+
+## 📁 Projetos
+
+Os projetos exibidos neste portfólio são carregados dinamicamente através da **API pública do GitHub**, garantindo que novos repositórios relevantes apareçam automaticamente no site.
+
+Cada projeto apresenta:
+
+- Nome do repositório
+- Descrição
+- Linguagem utilizada
+- Link direto para o código no GitHub
+
+---
+
+## 📬 Contato
+
+Caso queira entrar em contato comigo:
+
+✉️ Email
+valeriano.carolina@icloud.com
+
+💼 LinkedIn
+https://www.linkedin.com/in/carolina-valeriano-9a8122230
+
+💻 GitHub
+https://github.com/valerianocarolina
+
+---
+
+## 📌 Objetivo do Projeto
+
+Este projeto foi criado como parte do meu desenvolvimento profissional, com o objetivo de:
+
+- Consolidar conhecimentos em desenvolvimento frontend
+- Demonstrar projetos e experiências
+- Aplicar boas práticas de arquitetura e organização de código
+- Explorar integração com APIs externas
+- Criar uma presença profissional na web
+
+---
+
+## 📄 Licença
+
+Este projeto está disponível sob a licença MIT.
