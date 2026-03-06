@@ -5,7 +5,7 @@ import { routes } from '../../routes/routesConfig'
 
 import './Header.css'
 
-const Navbar = () => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isDark, setIsDark] = useState(true)
   const [scrolled, setScrolled] = useState(false)
@@ -106,4 +106,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Header
