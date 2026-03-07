@@ -2,6 +2,8 @@ import { ArrowDown, Github, Linkedin } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 import { socialLinks } from '../../constants/socialLinks'
+import { Button } from '../../components/Button/Button'
+
 import heroImage from '../../assets/images/hero-illustration.png'
 
 import './styles.css'
@@ -31,29 +33,30 @@ export function Home() {
           </p>
 
           <div className="hero-buttons">
-            <Link to="/projects" className="button-primary">
-              Ver Projetos
-              <ArrowDown size={16} />
+            <Link to="/projects">
+              <Button variant="primary" icon={<ArrowDown size={16} />}>
+                Ver Projetos
+              </Button>
             </Link>
 
             <a
               href={socialLinks.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="button-secondary"
             >
-              <Github size={16} />
-              GitHub
+              <Button variant="secondary" icon={<Github size={16} />}>
+                GitHub
+              </Button>
             </a>
 
             <a
               href={socialLinks.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="button-secondary"
             >
-              <Linkedin size={16} />
-              LinkedIn
+              <Button variant="secondary" icon={<Linkedin size={16} />}>
+                LinkedIn
+              </Button>
             </a>
           </div>
         </div>
