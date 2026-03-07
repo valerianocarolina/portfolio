@@ -16,10 +16,11 @@
 
   display: flex;
   flex-direction: column;
-  gap: 48px;
+
+  gap: 64px;
 }
 
-/* TEXT */
+/* TEXTO */
 
 .hero-content {
   text-align: center;
@@ -80,7 +81,7 @@
   font-weight: 500;
 }
 
-/* BUTTONS */
+/* BOTÕES */
 
 .hero-buttons {
   display: flex;
@@ -91,55 +92,7 @@
   flex-wrap: wrap;
 }
 
-.button-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-
-  padding: 12px 24px;
-
-  border-radius: var(--radius);
-
-  background: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
-
-  font-size: 14px;
-  font-weight: 500;
-
-  transition: opacity 0.2s;
-}
-
-.button-primary:hover {
-  opacity: 0.9;
-}
-
-.button-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-
-  padding: 12px 24px;
-
-  border-radius: var(--radius);
-
-  border: 1px solid hsl(var(--border));
-
-  background: hsl(var(--surface));
-  color: hsl(var(--foreground));
-
-  font-size: 14px;
-
-  transition: all 0.2s ease;
-}
-
-.button-secondary:hover {
-  border-color: hsl(var(--primary) / 0.4);
-  color: hsl(var(--primary));
-}
-
-.button-secondary svg {
-  color: inherit;
-}
+/* IMAGEM */
 
 .hero-image-wrapper {
   position: relative;
@@ -178,12 +131,14 @@
   border: 1px solid hsl(var(--border));
 }
 
-/* RESPONSIVE */
+/* RESPONSIVO */
 
 @media (min-width: 1024px) {
   .hero-container {
     flex-direction: row;
+
     align-items: center;
+
     justify-content: space-between;
   }
 
