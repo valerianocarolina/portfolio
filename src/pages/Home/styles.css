@@ -124,15 +124,21 @@
 
   border: 1px solid hsl(var(--border));
 
-  background: hsl(var(--card));
+  background: hsl(var(--surface));
+  color: hsl(var(--foreground));
 
   font-size: 14px;
 
-  transition: border 0.2s;
+  transition: all 0.2s ease;
 }
 
 .button-secondary:hover {
   border-color: hsl(var(--primary) / 0.4);
+  color: hsl(var(--primary));
+}
+
+.button-secondary svg {
+  color: inherit;
 }
 
 .hero-image-wrapper {
