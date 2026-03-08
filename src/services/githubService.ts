@@ -1,4 +1,6 @@
-export async function getProjects() {
+import type { Project } from '../types/project'
+
+export async function getProjects(): Promise<Project[]> {
   const response = await fetch('/api/projects')
 
   if (!response.ok) {
