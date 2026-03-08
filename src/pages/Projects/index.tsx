@@ -40,8 +40,6 @@ export function Projects() {
         ) : (
           <div className="projects-grid">
             {projects.map((project) => {
-              console.log(project)
-
               return (
                 <ProjectCard
                   key={project.name}
