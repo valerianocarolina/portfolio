@@ -1,0 +1,64 @@
+.about {
+  position: relative;
+
+  padding: 120px 24px;
+}
+
+.about-container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'JetBrains Mono', monospace;
+
+  font-size: 14px;
+
+  color: hsl(var(--primary));
+
+  margin-bottom: 8px;
+}
+
+.section-heading {
+  font-size: 36px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.02em;
+}
+
+.about-grid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 32px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+
+  color: hsl(var(--muted-foreground));
+
+  line-height: 1.7;
+}
+
+.about-text span {
+  color: hsl(var(--foreground));
+
+  font-weight: 500;
+}
+
+.about-card {
+  display: flex;
+  justify-content: center;
+}
+
+/* RESPONSIVO */
+
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
