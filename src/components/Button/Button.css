@@ -1,0 +1,54 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 24px;
+
+  border-radius: var(--radius);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+  border: none;
+}
+
+/* PRIMARY */
+
+.button-primary {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.button-primary:hover {
+  opacity: 0.9;
+}
+
+/* SECONDARY */
+
+.button-secondary {
+  background: hsl(var(--surface));
+  border: 1px solid hsl(var(--border));
+
+  color: hsl(var(--foreground));
+}
+
+.button-secondary:hover {
+  border-color: hsl(var(--primary) / 0.4);
+  color: hsl(var(--primary));
+}
+
+/* ICON */
+
+.button-icon {
+  display: flex;
+  align-items: center;
+}
+
+.button svg {
+  color: inherit;
+}

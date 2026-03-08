@@ -1,0 +1,40 @@
+.techstack {
+  position: relative;
+
+  padding: 120px 24px;
+}
+
+.techstack-container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.section-description {
+  margin-top: 8px;
+
+  max-width: 520px;
+
+  color: hsl(var(--muted-foreground));
+}
+
+.tech-grid {
+  margin-top: 40px;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .tech-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

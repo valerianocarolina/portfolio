@@ -1,0 +1,44 @@
+.container {
+  padding: 40px;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.color-card {
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+}
+
+/* tokens */
+
+.background {
+  background: hsl(var(--background));
+}
+
+.surface {
+  background: hsl(var(--surface));
+}
+
+.primary {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.secondary {
+  background: hsl(var(--secondary));
+}
+
+.accent {
+  background: hsl(var(--accent));
+}
+
+.muted {
+  background: hsl(var(--muted));
+}

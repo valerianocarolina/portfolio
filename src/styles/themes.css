@@ -1,0 +1,19 @@
+:root {
+  --background: 222 47% 4%;
+  --foreground: 210 40% 98%;
+
+  --surface: 222 47% 8%;
+  --surface-foreground: 210 40% 98%;
+
+  --border: 215 28% 17%;
+}
+
+.light {
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+
+  --surface: 210 40% 96%;
+  --surface-foreground: 222 47% 11%;
+
+  --border: 214 32% 91%;
+}
