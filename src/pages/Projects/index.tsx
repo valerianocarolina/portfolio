@@ -1,49 +1,29 @@
+import { useEffect, useState } from 'react'
 import { ProjectCard } from '../../components/ProjectCard/ProjectCard'
+import { getProjects } from '../../services/githubService'
+import type { Project } from '../../types/project'
+
 import './styles.css'
 
-interface Project {
-  name: string
-  description: string
-  tags: string[]
-  github?: string
-  demo?: string
-}
-
-const projects: Project[] = [
-  {
-    name: 'E-Commerce Mobile App',
-    description:
-      'Aplicação mobile de e-commerce desenvolvida com React Native, Redux e arquitetura baseada em componentes.',
-    tags: ['React Native', 'Redux', 'TypeScript', 'REST API'],
-    github: 'https://github.com/valerianocarolina',
-  },
-  {
-    name: 'Task Management Dashboard',
-    description:
-      'Dashboard interativo para gerenciamento de tarefas com drag-and-drop e filtros avançados.',
-    tags: ['React', 'TypeScript', 'State Management'],
-    github: 'https://github.com/valerianocarolina',
-    demo: '#',
-  },
-  {
-    name: 'Weather App',
-    description:
-      'Aplicação de previsão do tempo com integração de API e interface responsiva.',
-    tags: ['React', 'API', 'CSS'],
-    github: 'https://github.com/valerianocarolina',
-    demo: '#',
-  },
-  {
-    name: 'Developer Portfolio',
-    description:
-      'Portfólio pessoal desenvolvido com React, TypeScript e design system próprio.',
-    tags: ['React', 'TypeScript', 'Vite'],
-    github: 'https://github.com/valerianocarolina',
-    demo: '#',
-  },
-]
-
 export function Projects() {
+  const [projects, setProjects] = useState<Project[]>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    async function loadProjects() {
+      try {
+        const data = await getProjects()
+        setProjects(data)
+      } catch (error) {
+        console.error('Erro ao buscar projetos', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    loadProjects()
+  }, [])
+
   return (
     <section className="projects">
       <div className="projects-container">
@@ -55,11 +35,26 @@ export function Projects() {
           Alguns projetos que demonstram minhas habilidades e interesses.
         </p>
 
-        <div className="projects-grid">
-          {projects.map((project) => (
-            <ProjectCard key={project.name} {...project} />
-          ))}
-        </div>
+        {loading ? (
+          <p className="projects-loading">Carregando projetos...</p>
+        ) : (
+          <div className="projects-grid">
+            {projects.map((project) => {
+              console.log(project)
+
+              return (
+                <ProjectCard
+                  key={project.name}
+                  name={project.name}
+                  description={project.description}
+                  tags={project.technologies}
+                  github={project.github}
+                  demo={project.demo}
+                />
+              )
+            })}
+          </div>
+        )}
       </div>
     </section>
   )
