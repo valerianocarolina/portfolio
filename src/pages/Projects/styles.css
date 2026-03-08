@@ -1,0 +1,32 @@
+.projects {
+  padding: 120px 24px;
+}
+
+.projects-container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.section-description {
+  margin-top: 12px;
+
+  color: hsl(var(--muted-foreground));
+
+  max-width: 520px;
+}
+
+.projects-grid {
+  margin-top: 40px;
+
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

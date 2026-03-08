@@ -1,0 +1,46 @@
+.contact {
+  padding: 120px 24px;
+
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 720px;
+
+  margin: 0 auto;
+}
+
+.contact-heading {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-description {
+  margin-top: 12px;
+  margin-bottom: 40px;
+
+  max-width: 520px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  color: hsl(var(--muted-foreground));
+}
+
+.contact-buttons {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .contact-buttons {
+    flex-direction: row;
+
+    justify-content: center;
+  }
+}
