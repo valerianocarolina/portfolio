@@ -1,5 +1,6 @@
 import { Github, ExternalLink } from 'lucide-react'
 import './ProjectCard.css'
+import { capitalize } from '../../utils/capitalize'
 
 interface ProjectCardProps {
   name: string
@@ -18,7 +19,7 @@ export function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className="project-card">
-      <h3 className="project-card-title">{name}</h3>
+      <h3 className="project-card-title">{capitalize(name)}</h3>
 
       <p className="project-card-description">{description}</p>
 
