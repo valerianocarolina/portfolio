@@ -2,23 +2,28 @@
 
 Portfólio profissional desenvolvido para apresentar meus projetos, experiência e habilidades como desenvolvedora frontend.
 
-O objetivo deste projeto é centralizar minhas experiências em desenvolvimento web e mobile, além de demonstrar boas práticas de arquitetura, consumo de APIs e design de interfaces modernas.
+Este projeto foi criado com o objetivo de centralizar minhas experiências em desenvolvimento web e mobile, além de demonstrar boas práticas de arquitetura de frontend, consumo de APIs e construção de interfaces modernas.
+
+🚧 **Projeto em desenvolvimento** - melhorias de acessibilidade e padronização da interface estão sendo implementadas.
+
+---
+
+## 🔗 Acesse o projeto
+
+🌍 **Website:**
+https://carolinavaleriano.com
 
 ---
 
 ## 👩🏻‍💻 Sobre mim
 
-Sou desenvolvedora frontend com experiência em desenvolvimento de aplicações web e mobile utilizando tecnologias modernas do ecossistema JavaScript.
+Sou desenvolvedora frontend com experiência no desenvolvimento de aplicações web e mobile utilizando tecnologias modernas do ecossistema JavaScript.
 
-Atualmente trabalho com **React Native** no desenvolvimento de aplicações mobile e também possuo experiência com **React para web**.
+Atualmente trabalho com **React Native** no desenvolvimento de aplicações mobile e também possuo experiência com **React** para aplicações web.
 
-Além do desenvolvimento frontend, tenho interesse em **análise de dados** e busco evoluir minhas habilidades nessa área.
+Além do desenvolvimento frontend, tenho interesse em **backend** e **análise de dados**, buscando constantemente evoluir minhas habilidades nessas áreas e ampliar minha visão sobre arquitetura de sistemas e produtos digitais.
 
-🎓 Estudante de **Engenharia de Computação no CEFET-MG**
-
-💻 Desenvolvedora Frontend
-
-📊 Interessada em Dados e Produtos Digitais
+🎓 Estudante de **Engenharia de Computação - CEFET-MG**
 
 ---
 
@@ -38,20 +43,22 @@ Este projeto foi desenvolvido utilizando tecnologias modernas do ecossistema fro
 
 - Git
 - GitHub
-- APIs REST
+- Github REST API
 - Figma
 
 ---
 
 ## ✨ Funcionalidades
 
-O portfólio possui diversas funcionalidades pensadas para demonstrar habilidades técnicas e oferecer uma boa experiência de navegação.
+O portfólio foi desenvolvido com foco em demonstrar habilidades técnicas e oferecer uma boa experiência de navegação.
+
+Principais funcionalidades:
 
 - Apresentação profissional
-- Seção sobre mim
+- Seção **Sobre mim**
 - Exibição de tecnologias utilizadas
 - Listagem dinâmica de projetos
-- Integração com API do GitHub
+- Integração com **API pública do GitHub**
 - Visualização de experiência profissional
 - Links para contato profissional
 - Interface responsiva
@@ -70,6 +77,65 @@ Cada projeto apresenta:
 - Linguagem utilizada
 - Link direto para o código no GitHub
 
+Essa abordagem permite manter o portfólio sempre atualizado sem necessidade de manutenção manual.
+
+---
+
+## 🛠 Arquitetura e Estrutura
+
+O projeto segue uma arquitetura simples e escalável para aplicações frontend.
+
+Principais princípios adotados:
+
+- Separação de componentes reutilizáveis
+- Organização modular do código
+- Consumo de APIs externas
+- Tipagem estática com TypeScript
+- Interface responsiva e acessível
+
+---
+
+## 👩‍💻 Rodando o projeto localmente
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/valerianocarolina/portfolio.git
+```
+
+Entre na pasta do projeto:
+
+```bash
+cd portfolio
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Execute o projeto:
+
+```bash
+npm run dev
+```
+
+O projeto estará disponível em:
+
+```bash
+http://localhost:5173
+```
+
+---
+
+## 🛠 Melhorias planejadas
+
+O projeto continua evoluindo e algumas melhorias estão planejadas:
+
+- Padronização da **navbar** para português
+- Ajustes de **acessibilidade** no modo light
+
 ---
 
 ## 📬 Contato
@@ -84,18 +150,6 @@ https://www.linkedin.com/in/carolina-valeriano-9a8122230
 
 💻 GitHub
 https://github.com/valerianocarolina
-
----
-
-## 📌 Objetivo do Projeto
-
-Este projeto foi criado como parte do meu desenvolvimento profissional, com o objetivo de:
-
-- Consolidar conhecimentos em desenvolvimento frontend
-- Demonstrar projetos e experiências
-- Aplicar boas práticas de arquitetura e organização de código
-- Explorar integração com APIs externas
-- Criar uma presença profissional na web
 
 ---
 
