@@ -15,6 +15,33 @@
   max-width: 520px;
 }
 
+.projects-loader {
+  width: 20px;
+  height: 20px;
+
+  color: hsl(var(--primary));
+  animation: spin 1.5s linear infinite;
+}
+
+.projects-loader-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 20;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .projects-grid {
   margin-top: 40px;
 

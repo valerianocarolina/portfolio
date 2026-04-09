@@ -4,6 +4,7 @@ import { getProjects } from '../../services/githubService'
 import type { Project } from '../../types/project'
 
 import './styles.css'
+import { Loader } from 'lucide-react'
 
 export function Projects() {
   const [projects, setProjects] = useState<Project[]>([])
@@ -36,7 +37,9 @@ export function Projects() {
         </p>
 
         {loading ? (
-          <p className="projects-loading">Carregando projetos...</p>
+          <div className="projects-loader-overlay">
+            <Loader className="projects-loader" />
+          </div>
         ) : (
           <div className="projects-grid">
             {projects.map((project) => {
