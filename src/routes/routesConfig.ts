@@ -8,37 +8,37 @@ import { Contact } from '../pages/Contact'
 export const routes = [
   {
     path: '/',
-    label: 'Home',
+    label: 'Inicio',
     element: Home,
     showInNavbar: false,
   },
   {
     path: '/about',
-    label: 'About',
+    label: 'Sobre',
     element: About,
     showInNavbar: true,
   },
   {
     path: '/tech-stack',
-    label: 'Tech Stack',
+    label: 'Tecnologias',
     element: TechStack,
     showInNavbar: true,
   },
   {
     path: '/projects',
-    label: 'Projects',
+    label: 'Projetos',
     element: Projects,
     showInNavbar: true,
   },
   {
     path: '/experience',
-    label: 'Experience',
+    label: 'Experiencia',
     element: Experience,
     showInNavbar: true,
   },
   {
     path: '/contact',
-    label: 'Contact',
+    label: 'Contato',
     element: Contact,
     showInNavbar: true,
   },

@@ -14,6 +14,7 @@ const Header = () => {
 
   useEffect(() => {
     document.documentElement.classList.add('dark')
+    setIsDark(true)
   }, [])
 
   useEffect(() => {
@@ -24,8 +25,9 @@ const Header = () => {
   }, [])
 
   const toggleTheme = () => {
-    setIsDark(!isDark)
-    document.documentElement.classList.toggle('light')
+    const root = document.documentElement
+    root.classList.toggle('dark')
+    setIsDark(root.classList.contains('dark'))
   }
 
   const handleNavigation = () => {

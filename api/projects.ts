@@ -2,28 +2,65 @@
 export default async function handler(req: any, res: any) {
   try {
     const username = 'valerianocarolina'
+    const token = (globalThis as any).process?.env?.GITHUB_TOKEN
+    const headers = {
+      Accept: 'application/vnd.github+json',
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    }
 
-    const response = await fetch(
-      `https://api.github.com/users/${username}/repos`,
+    const endpoints = token
+      ? [
+          'https://api.github.com/user/repos?visibility=public&affiliation=owner,collaborator,organization_member&sort=updated&per_page=100',
+        ]
+      : [
+          `https://api.github.com/users/${username}/repos?type=owner&sort=updated&per_page=100`,
+          `https://api.github.com/users/${username}/repos?type=member&sort=updated&per_page=100`,
+        ]
+
+    const repoResponses = await Promise.all(
+      endpoints.map((endpoint) =>
+        fetch(endpoint, {
+          headers,
+        }),
+      ),
     )
 
-    const repos = await response.json()
+    const hasFailedResponse = repoResponses.some((response) => !response.ok)
+
+    if (hasFailedResponse) {
+      throw new Error('Failed to fetch repositories from GitHub')
+    }
+
+    const reposFromResponses = await Promise.all(
+      repoResponses.map((response) => response.json()),
+    )
+
+    const uniqueRepos = Array.from(
+      new Map(
+        reposFromResponses
+          .flat()
+          .map((repo: any) => [repo.id, repo] as const),
+      ).values(),
+    )
 
     const projects = await Promise.all(
-      repos
+      uniqueRepos
         .filter((repo: any) => !repo.fork && repo.visibility === 'public')
         .map(async (repo: any) => {
-          const languagesResponse = await fetch(
-            `https://api.github.com/repos/${username}/${repo.name}/languages`,
-          )
+          const languagesResponse = await fetch(repo.languages_url, {
+            headers,
+          })
 
-          const languagesData = await languagesResponse.json()
+          const languagesData = languagesResponse.ok
+            ? await languagesResponse.json()
+            : {}
 
           const technologies = Object.keys(languagesData)
 
           return {
             name: repo.name,
             description: repo.description,
+            url: repo.html_url,
             github: repo.html_url,
             demo: repo.homepage,
             technologies,
