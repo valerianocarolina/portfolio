@@ -129,15 +129,6 @@ http://localhost:5173
 
 ---
 
-## 🛠 Melhorias planejadas
-
-O projeto continua evoluindo e algumas melhorias estão planejadas:
-
-- Padronização da **navbar** para português
-- Ajustes de **acessibilidade** no modo light
-
----
-
 ## 📬 Contato
 
 Caso queira entrar em contato comigo:
